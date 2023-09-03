@@ -38,12 +38,29 @@ body {
     background-color: var(--white-background-color);
     margin: 0 auto;
 }
+/*Phone screen*/
 .container {
-    width: 100%;
-    max-width: 1158px;
-    padding: 0 15px;
+
+    max-width: 428px;
+    min-width: 320px;
     margin: 0 auto;
+    padding: 0 16px;   
+
+    }
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        
+    }
 }
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
 .link {
     text-decoration: none;
 }
@@ -171,12 +188,25 @@ body {
     color: var(--white-background-color);
     max-width: 496px;
     display: flex;
-    margin: auto;
+    margin: 0 auto;
+    margin-bottom: 48px;
      
 }
 .herobutton {
     /*Order Service*/
-    font-size: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 32px;
+    height: 22px;
+    stroke: var(--hover-focus-color);
+    background-color: transparent;
+    border: none;
+    outline: transparent;
+}
+    /*font-size: 16px;
     font-family: inherit;
     font-weight: 500;
     line-height: 1.5;
@@ -191,9 +221,9 @@ body {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);    
     min-width: 169px;
     border: none; 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
 
-}
+
 .herobutton:hover,
 .herobutton:focus {
     
@@ -203,7 +233,9 @@ body {
     /*Advantages*/
 
 .advantages {
-    padding: 120px 0;
+    /*padding: 120px 0;*/
+    padding: 96px 0px;
+    
 }
 .visually-hidden {
     position: absolute;
@@ -217,16 +249,70 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-.advantage-list {
-    display: flex;
-    gap: 24px;
-}
+/*Mobile section Advantage*/
 
 .advantage-card {
+
+    margin-bottom: 72px;
+}
+.advantage-card:last-child {
+    margin-bottom: 0;
+}
+.advantage-block {
+    display: none;
+}
+
+.advantage-title {
+
+    color: var(--title-text-color);
+    text-align: center;  
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11; 
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+
+.advantage-text {
     
-    width: calc((100% - 72px)/4);
+    color: var(--primary-text-color);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5; 
+    letter-spacing: 0.02em;
+}
+
+/*Tablet section Advantage*/
+@media screen and (min-width: 768px) {
+
+    .advantage-list {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 72px 24px;
+        
+}
+.advantage-title {
+    text-align: left;
 
 }
+    .advantage-card {
+    width: calc((100% - 72px)/2);
+    margin: 0;
+}
+}
+
+/*Desktop section Advantage*/
+@media screen and (min-width: 1200px) {
+
+.advantage-card {  
+
+    width: calc((100% - 72px)/4);
+    }
+
 .advantage-block {
     width: 264px;
     height: 112px;
@@ -236,43 +322,250 @@ body {
     justify-content: center;
     border-radius: 4px;
     margin-bottom: 8px;
-}
+    }
+        
 .advantage-title {
+    
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--title-text-color);
-    margin-bottom: 8px;
-}
+    text-align: center;
+    }
 .advantage-text {
-    
+            
+    font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--primary-text-color);
-}
+    }
+}    
+
+    
 /*boxes*/
+/*Mobile section Boxes*/
 
 .boxes {
-    padding: 0 0 120px 0;
+    display: none;
 }
 
-.boxestitle {
+/*Tablet section Boxes*/
+@media screen and (min-width: 768px) {
+    .boxes {
+        display: none;
+    }
+}
+
+
+/*Desktop section Boxes*/
+@media screen and (min-width: 1200px) {
+    .boxes {
+        padding: 0 0 120px 0;
+    }
+
+    .boxestitle {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        text-align: center;
+        color: var(--title-text-color);
+        margin-bottom: 72px;
+    }
+    .boxfoto {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+}
+
+/*team*/
+/*Mobile section Team*/
+
+.team {
+    background-color: var(--team-bg-color);
+    padding: 96px 82px;
+}
+
+.team-title {
+    
     font-size: 36px;
     font-weight: 700;
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    text-align: center;
     color: var(--title-text-color);
+    text-align: center;
     margin-bottom: 72px;
 }
-.boxfoto {
+.team-list {
+    
+}
+.card {
+    
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    margin-bottom: 72px;
+
+}
+
+.card:last-child {
+    margin-bottom: 0;
+}
+.team-card {
+    background-color: var(--white-background-color);
+    
+}
+.job {
+    padding: 32px 0;
+    background-color: var(--white-background-color);
+}       
+.team-name {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+    text-align: center;
+    margin-bottom: 8px;
+}
+.team-icon-block {
+    
+}
+.social-list {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 24px;
+    flex-wrap: wrap;
+      
+}
+    
+.team-job {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    text-align: center;
+    margin-bottom: 8px;
+    
+}
+.team-icon {
+    fill: var(--team-bg-color);
+}
+.socials-link,
+.socials-link-footer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--hover-focus-color);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+.social-icon {
+    width: 40px;
+    height: 40px;
+}
+.socials-link:hover,
+.socials-link:focus {
+    background-color: var(--section-hover-focus-color);
+}
+
+/*Tablet section Team*/
+@media screen and (min-width: 768px)
+
+.team {
+    background-color: var(--team-bg-color);
+    padding: 120px 0;
+}
+
+.team-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--title-text-color);
+    text-align: center;
+    margin-bottom: 72px;
+}
+.team-list {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
 }
-/*team*/
+.card {
+    width: calc((100% - 72px) / 4);
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+
+}
+.team-card {
+    background-color: var(--white-background-color);
+    
+}
+.job {
+    padding: 32px 0;
+    background-color: var(--white-background-color);
+}       
+.team-name {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+    text-align: center;
+    margin-bottom: 8px;
+}
+.team-icon-block {
+    
+}
+.social-list {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 24px;
+    flex-wrap: wrap;
+      
+}
+    
+.team-job {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    text-align: center;
+    margin-bottom: 8px;
+    
+}
+.team-icon {
+    fill: var(--team-bg-color);
+}
+.socials-link,
+.socials-link-footer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--hover-focus-color);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+.social-icon {
+    width: 40px;
+    height: 40px;
+}
+.socials-link:hover,
+.socials-link:focus {
+    background-color: var(--section-hover-focus-color);
+}
+
+/*------------Desktop section Team----------------*/
+@media screen and (min-width: 1200px)
 
 .team {
     background-color: var(--team-bg-color);
