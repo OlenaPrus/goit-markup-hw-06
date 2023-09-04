@@ -251,13 +251,11 @@ body {
 }
 /*Mobile section Advantage*/
 
-.advantage-card {
+.advantage-card:not(:last-child) {
 
     margin-bottom: 72px;
 }
-.advantage-card:last-child {
-    margin-bottom: 0;
-}
+
 .advantage-block {
     display: none;
 }
@@ -291,18 +289,17 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     gap: 72px 24px;
         
-}
-.advantage-title {
-    text-align: left;
+    }
+    .advantage-title {
+        text-align: left;
 
-}
+    }
     .advantage-card {
-    width: calc((100% - 72px)/2);
-    margin: 0;
-}
+        width: calc((100% - 72px)/2);
+        margin: 0;
+    }
 }
 
 /*Desktop section Advantage*/
@@ -385,7 +382,7 @@ body {
 
 .team {
     background-color: var(--team-bg-color);
-    padding: 96px 82px;
+    /*padding: 96px 82px;*/
 }
 
 .team-title {
@@ -397,25 +394,26 @@ body {
     text-transform: capitalize;
     color: var(--title-text-color);
     text-align: center;
-    margin-bottom: 72px;
+    padding-top: 96px;
+    padding-bottom: 72px;
 }
 .team-list {
     
 }
 .card {
-    
+    display: block;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-    margin-bottom: 72px;
-
+    
 }
 
-.card:last-child {
-    margin-bottom: 0;
+.card:not(:last-child) {
+
+    margin-bottom: 72px;
 }
 .team-card {
     background-color: var(--white-background-color);
-    
+    justify-content: center;
 }
 .job {
     padding: 32px 0;
@@ -448,6 +446,7 @@ body {
     color: var(--primary-text-color);
     text-align: center;
     margin-bottom: 8px;
+    font-size: 16px;
     
 }
 .team-icon {
@@ -475,128 +474,47 @@ body {
 }
 
 /*Tablet section Team*/
-@media screen and (min-width: 768px)
+@media only screen and (max-width: 1199px) {
 
-.team {
-    background-color: var(--team-bg-color);
-    padding: 120px 0;
-}
-
-.team-title {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: var(--title-text-color);
-    text-align: center;
-    margin-bottom: 72px;
-}
 .team-list {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-}
+    justify-content: center;
+    }
+
 .card {
-    width: calc((100% - 72px) / 4);
+    width: calc((100% - 72px) / 2);
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 
-}
+    }
+
 .team-card {
     background-color: var(--white-background-color);
     
+    }
 }
-.job {
-    padding: 32px 0;
-    background-color: var(--white-background-color);
-}       
-.team-name {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: var(--title-text-color);
-    text-align: center;
-    margin-bottom: 8px;
-}
-.team-icon-block {
+/*
+
     
-}
-.social-list {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    gap: 24px;
-    flex-wrap: wrap;
-      
-}
-    
-.team-job {
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--primary-text-color);
-    text-align: center;
-    margin-bottom: 8px;
-    
-}
-.team-icon {
-    fill: var(--team-bg-color);
-}
-.socials-link,
-.socials-link-footer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: var(--hover-focus-color);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
-}
-.social-icon {
-    width: 40px;
-    height: 40px;
-}
-.socials-link:hover,
-.socials-link:focus {
-    background-color: var(--section-hover-focus-color);
-}
+
 
 /*------------Desktop section Team----------------*/
-@media screen and (min-width: 1200px)
+@media screen and (min-width: 1200px) {
 
-.team {
-    background-color: var(--team-bg-color);
-    padding: 120px 0;
-}
-
-.team-title {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: var(--title-text-color);
-    text-align: center;
-    margin-bottom: 72px;
+.card {
+    width: calc((100% - 72px) / 4);
+    
 }
 .team-list {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+    justify-content: center;
+    }
 }
-.card {
-    width: calc((100% - 72px) / 4);
-    border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-
-}
-.team-card {
-    background-color: var(--white-background-color);
-    
-}
+/*
 .job {
     padding: 32px 0;
     background-color: var(--white-background-color);
