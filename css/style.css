@@ -202,8 +202,7 @@ body {
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: var(--primary-text-color);
-        /*flex-direction: column;
-    gap: 12px;*/
+        
     }
 }
 
@@ -299,7 +298,7 @@ body {
 /*Advantages*/
 
 .advantages {
-    /*padding: 120px 0;*/
+    
     padding: 96px 0px;
 
 }
@@ -498,8 +497,6 @@ body {
     text-align: center;
     margin-bottom: 8px;
 }
-
-.team-icon-block {}
 
 .social-list {
     display: flex;
