@@ -264,6 +264,7 @@ body {
 @media screen and (min-width: 768px) {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/dark-bg-tab-1x.jpg);
+        padding: 188px 0px;
     }
 }
 
@@ -414,7 +415,7 @@ body {
         align-items: center;
         justify-content: center;
         border-radius: 4px;
-        
+        margin-bottom: 8px;
     }
 
     .advantage-title {
@@ -606,7 +607,7 @@ body {
         }
     .card {
         flex-basis: calc((100% - 72px) / 4);
-
+        border-radius: 0px 0px 4px 4px;
     }
 
     .team-list {
@@ -1092,7 +1093,6 @@ body {
 
 .leave-contacts {
     
-    /*width: 360px;*/
     color: var(--title-text-color);
     text-align: center;
     font-weight: 500;
@@ -1415,11 +1415,10 @@ body {
         color: var(--button-hover-focus-color);
         text-decoration: none;
     }
-
-    .mobile-menu-item {
+    .mobile-menu-item:not(:last-child) {
         margin-bottom: 40px;
     }
-
+    
     .mob-contacts {
         
         margin-top: auto;        
